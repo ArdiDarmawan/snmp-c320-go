@@ -1,0 +1,15 @@
+services:
+  zte-c320-snmp-api:
+    build: .
+    container_name: zte-c320-snmp-api
+    restart: unless-stopped
+
+    environment:
+      - PORT=8080   # port DI DALAM container (biarkan)
+      - CONFIG_PATH=/app/config.yaml
+
+    ports:
+      - "9090:8080"  # HOST:CONTAINER
+
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro

@@ -1,0 +1,13 @@
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+README.md
+
+*.exe
+*.log
+*.tmp
+
+# kalau ada build output lokal
+bin/
+dist/
